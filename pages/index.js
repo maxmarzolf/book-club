@@ -25,7 +25,7 @@ export default function Home({ articles }) {
   console.log(articles);
 
   let articleList = articles.map(a => 
-    <div>
+    <div key={a.sys.id}>
       <h1>{a.fields.title}</h1>
       <ReactMarkdown>{a.fields.body}</ReactMarkdown>
     </div>
